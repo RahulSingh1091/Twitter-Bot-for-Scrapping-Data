@@ -24,7 +24,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 message,favorite_count,retweet_count,created_at,user_name,favourites_count,description,friends_count,followers_count=[],[],[],[],[],[],[],[],[]
-for status in tweepy.Cursor(api.user_timeline, id="Test_Tweeter_Profile ").items(100):
+for status in tweepy.Cursor(api.user_timeline, id="Test_Twitter_Profile ").items(100):
     message.append(status.text)
     favorite_count.append(status.favorite_count)
     retweet_count.append(status.retweet_count)
